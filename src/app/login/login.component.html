@@ -1,0 +1,42 @@
+<div class="mainContainer">
+  <div class="mainCard">
+    <div class="card">
+      <div class="card-header">
+        <h3 style="font-size: 30px; ">LOGIN</h3>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="login()">
+          <mat-form-field class="inputField">
+            <input matInput [(ngModel)]="username" name="username" placeholder="Username" required />
+            <mat-error *ngIf="!username">*Username is required</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="inputField">
+            <input matInput [(ngModel)]="password" name="password" type="password" placeholder="Password" required />
+            <mat-error *ngIf="!password">*Password is required</mat-error>
+          </mat-form-field> <br> <br>
+          <div class="forgotPassword">
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <div class="buttonContainer">
+            <button mat-raised-button color="primary" type="submit" class="loginButton">Login <span
+                class="material-symbols-outlined">
+                login
+              </span></button>
+          </div>
+
+          <div class="newMemberSignup">
+            <p style="cursor: pointer;">New member? <a (click)="gotoRegistration()">Sign up</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>

@@ -1,0 +1,49 @@
+<div class="mainContainer">
+  <div class="mainCard">
+    <div class="card">
+      <div class="card-header">
+        <h3 style="font-size: 30px;">SIGN UP</h3>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="signup()">
+          <div class="form-row">
+            <mat-form-field class="half-width">
+              <input matInput [(ngModel)]="firstName" name="firstName" placeholder="First Name" required />
+              <mat-error *ngIf="!firstName">*FirstName is required</mat-error>
+            </mat-form-field>
+            <mat-form-field class="half-width">
+              <input matInput [(ngModel)]="lastName" name="lastName" placeholder="Last Name" required />
+              <mat-error *ngIf="!lastName">*LastName is required</mat-error>
+            </mat-form-field>
+          </div>
+          <mat-form-field class="full-width">
+            <input matInput [(ngModel)]="mobileNumber" name="mobileNumber" placeholder="Mobile Number" required />
+            <mat-error *ngIf="!mobileNumber">*MobileNumber is required</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <input matInput [(ngModel)]="username" name="username" type="username" placeholder="username" required />
+            <mat-error *ngIf="!username">*Username is required</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <input matInput [(ngModel)]="password" name="password" type="password" placeholder="Password" required />
+            <mat-error *ngIf="!password">*Password is required</mat-error>
+          </mat-form-field>
+
+          <div class="buttonContainer">
+            <button mat-raised-button color="primary" type="submit" class="signupButton">Sign Up</button>
+          </div>
+
+          <div class="loginLink">
+            <p style="cursor: pointer;">Have an account? <a (click)="gotoLogin()">Login here</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>

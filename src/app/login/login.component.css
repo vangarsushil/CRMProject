@@ -1,0 +1,55 @@
+.mainContainer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 100vh;
+  background-image: url("./../../assets/Images/1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card {
+  margin-right: 160px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 10px;
+}
+
+.card-header {
+  background-color: aliceblue;
+  text-align: center;
+  padding: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.inputField {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.loginButton {
+  border-radius: 5px;
+}
+
+.forgotPassword {
+  text-align: left;
+  margin-top: -20px;
+}
+
+.newMemberSignup {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.newMemberSignup a {
+  color: #3498db;
+}
